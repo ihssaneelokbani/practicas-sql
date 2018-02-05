@@ -4,9 +4,9 @@
     <root id="1"/>
     <schema id="2" parent="1" name="IHSSANEE">
       <ObjectId>510</ObjectId>
-      <IntrospectionTimestamp>2018-02-05.10:36:38</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-02-05.10:56:22</IntrospectionTimestamp>
       <CreatedTimestamp>2018-01-22.10:59:34</CreatedTimestamp>
-      <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-02-05.10:56:22</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -253,64 +253,70 @@
     <table id="81" parent="2" name="LOCALIDADES">
       <ObjectId>264618</ObjectId>
       <CreatedTimestamp>2018-02-05.10:31:59</CreatedTimestamp>
-      <ModifiedTimestamp>2018-02-05.10:31:59</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-02-05.10:56:22</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="82" parent="2" name="PRUEBA">
+    <table id="82" parent="2" name="PROVINCIAS">
+      <ObjectId>264736</ObjectId>
+      <CreatedTimestamp>2018-02-05.10:56:15</CreatedTimestamp>
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="83" parent="2" name="PRUEBA">
       <ObjectId>262654</ObjectId>
       <CreatedTimestamp>2018-01-22.10:59:34</CreatedTimestamp>
       <ModifiedTimestamp>2018-01-22.10:59:34</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="83" parent="2" name="TAREAS">
+    <table id="84" parent="2" name="TAREAS">
       <ObjectId>263070</ObjectId>
       <CreatedTimestamp>2018-01-26.09:44:58</CreatedTimestamp>
       <ModifiedTimestamp>2018-01-26.09:44:58</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="84" parent="2" name="TIPOS_CURSOS">
+    <table id="85" parent="2" name="TIPOS_CURSOS">
       <ObjectId>263868</ObjectId>
       <CreatedTimestamp>2018-02-02.09:59:49</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-02.09:59:49</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <column id="85" parent="79" name="DNI">
+    <column id="86" parent="79" name="DNI">
       <Position>1</Position>
       <DataType>CHAR(9)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="86" parent="79" name="NOMBRE">
+    <column id="87" parent="79" name="NOMBRE">
       <Position>2</Position>
       <DataType>VARCHAR2(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="87" parent="79" name="APELLIDO1">
+    <column id="88" parent="79" name="APELLIDO1">
       <Position>3</Position>
       <DataType>VARCHAR2(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="88" parent="79" name="APELLIDO2">
+    <column id="89" parent="79" name="APELLIDO2">
       <Position>4</Position>
       <DataType>VARCHAR2(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="89" parent="79" name="DIRECCION">
+    <column id="90" parent="79" name="DIRECCION">
       <Position>5</Position>
       <DataType>VARCHAR2(50)|0</DataType>
     </column>
-    <column id="90" parent="79" name="TELEFONO">
+    <column id="91" parent="79" name="TELEFONO">
       <Position>6</Position>
       <DataType>CHAR(9)|0</DataType>
     </column>
-    <column id="91" parent="79" name="EDAD">
+    <column id="92" parent="79" name="EDAD">
       <Position>7</Position>
       <DataType>NUMBER(2)|0</DataType>
     </column>
-    <column id="92" parent="79" name="CIF">
+    <column id="93" parent="79" name="CIF">
       <Position>8</Position>
       <DataType>CHAR(9)|0</DataType>
     </column>
-    <index id="93" parent="79" name="ALUMNOS_PK">
+    <index id="94" parent="79" name="ALUMNOS_PK">
       <ObjectId>263858</ObjectId>
       <CreatedTimestamp>2018-02-02.09:57:35</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-02.09:57:35</ModifiedTimestamp>
@@ -318,14 +324,14 @@
       <ColNames>DNI</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="94" parent="79" name="ALUMNOS_PK">
+    <key id="95" parent="79" name="ALUMNOS_PK">
       <ModifiedTimestamp>2018-02-02.09:57:35</ModifiedTimestamp>
       <ColNames>DNI</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>ALUMNOS_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="95" parent="79" name="ALUMNOS_FK">
+    <foreign-key id="96" parent="79" name="ALUMNOS_FK">
       <ModifiedTimestamp>2018-02-02.09:57:35</ModifiedTimestamp>
       <ColNames>CIF</ColNames>
       <RefSchemaName>IHSSANEE</RefSchemaName>
@@ -333,41 +339,41 @@
       <RefKeyName>ALUMNOS_PK</RefKeyName>
       <OnDelete>restrict</OnDelete>
     </foreign-key>
-    <check id="96" parent="79" name="ALUMNOS_NN1">
+    <check id="97" parent="79" name="ALUMNOS_NN1">
       <ModifiedTimestamp>2018-02-02.09:57:35</ModifiedTimestamp>
       <ColNames>NOMBRE</ColNames>
       <Predicate>&quot;NOMBRE&quot; IS NOT NULL</Predicate>
     </check>
-    <check id="97" parent="79" name="ALUMNOS_NN2">
+    <check id="98" parent="79" name="ALUMNOS_NN2">
       <ModifiedTimestamp>2018-02-02.09:57:35</ModifiedTimestamp>
       <ColNames>APELLIDO1</ColNames>
       <Predicate>&quot;APELLIDO1&quot; IS NOT NULL</Predicate>
     </check>
-    <check id="98" parent="79" name="ALUMNOS_NN3">
+    <check id="99" parent="79" name="ALUMNOS_NN3">
       <ModifiedTimestamp>2018-02-02.09:57:35</ModifiedTimestamp>
       <ColNames>APELLIDO2</ColNames>
       <Predicate>&quot;APELLIDO2&quot; IS NOT NULL</Predicate>
     </check>
-    <column id="99" parent="80" name="ID_COMUNIDAD">
+    <column id="100" parent="80" name="ID_COMUNIDAD">
       <Position>1</Position>
       <DataType>NUMBER(2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="100" parent="80" name="NOMBRE">
+    <column id="101" parent="80" name="NOMBRE">
       <Position>2</Position>
       <DataType>VARCHAR2(25)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="101" parent="80" name="ID_CAPITAL">
+    <column id="102" parent="80" name="ID_CAPITAL">
       <Position>3</Position>
       <DataType>NUMBER(5)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="102" parent="80" name="MAX_PROVINCIA">
+    <column id="103" parent="80" name="MAX_PROVINCIA">
       <Position>4</Position>
       <DataType>NUMBER(1)|0</DataType>
     </column>
-    <index id="103" parent="80" name="COMUNIDADES_PK">
+    <index id="104" parent="80" name="COMUNIDADES_PK">
       <ObjectId>264627</ObjectId>
       <CreatedTimestamp>2018-02-05.10:36:37</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
@@ -375,7 +381,7 @@
       <ColNames>ID_COMUNIDAD</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="104" parent="80" name="COMUNIDADES_UK1">
+    <index id="105" parent="80" name="COMUNIDADES_UK1">
       <ObjectId>264628</ObjectId>
       <CreatedTimestamp>2018-02-05.10:36:37</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
@@ -383,7 +389,7 @@
       <ColNames>NOMBRE</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="105" parent="80" name="COMUNIDADES_UK2">
+    <index id="106" parent="80" name="COMUNIDADES_UK2">
       <ObjectId>264629</ObjectId>
       <CreatedTimestamp>2018-02-05.10:36:37</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
@@ -391,26 +397,26 @@
       <ColNames>ID_CAPITAL</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="106" parent="80" name="COMUNIDADES_PK">
+    <key id="107" parent="80" name="COMUNIDADES_PK">
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
       <ColNames>ID_COMUNIDAD</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>COMUNIDADES_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="107" parent="80" name="COMUNIDADES_UK1">
+    <key id="108" parent="80" name="COMUNIDADES_UK1">
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
       <ColNames>NOMBRE</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>COMUNIDADES_UK1</UnderlyingIndexName>
     </key>
-    <key id="108" parent="80" name="COMUNIDADES_UK2">
+    <key id="109" parent="80" name="COMUNIDADES_UK2">
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
       <ColNames>ID_CAPITAL</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>COMUNIDADES_UK2</UnderlyingIndexName>
     </key>
-    <foreign-key id="109" parent="80" name="COMUNIDADES_FK1">
+    <foreign-key id="110" parent="80" name="COMUNIDADES_FK1">
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
       <ColNames>ID_CAPITAL</ColNames>
       <RefSchemaName>IHSSANEE</RefSchemaName>
@@ -418,36 +424,36 @@
       <RefKeyName>LOCALIDADES_PK</RefKeyName>
       <OnDelete>restrict</OnDelete>
     </foreign-key>
-    <check id="110" parent="80" name="COMUNIDADES_NN1">
+    <check id="111" parent="80" name="COMUNIDADES_NN1">
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
       <ColNames>NOMBRE</ColNames>
       <Predicate>&quot;NOMBRE&quot; IS NOT NULL</Predicate>
     </check>
-    <check id="111" parent="80" name="COMUNIDADES_NN2">
+    <check id="112" parent="80" name="COMUNIDADES_NN2">
       <ModifiedTimestamp>2018-02-05.10:36:37</ModifiedTimestamp>
       <ColNames>ID_CAPITAL</ColNames>
       <Predicate>&quot;ID_CAPITAL&quot; IS NOT NULL</Predicate>
     </check>
-    <column id="112" parent="81" name="ID_LOCALIDAD">
+    <column id="113" parent="81" name="ID_LOCALIDAD">
       <Position>1</Position>
       <DataType>NUMBER(5)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="113" parent="81" name="NOMBRE">
+    <column id="114" parent="81" name="NOMBRE">
       <Position>2</Position>
       <DataType>VARCHAR2(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="114" parent="81" name="POBLACION">
+    <column id="115" parent="81" name="POBLACION">
       <Position>3</Position>
       <DataType>NUMBER(8)|0</DataType>
     </column>
-    <column id="115" parent="81" name="N_PROVINCIA">
+    <column id="116" parent="81" name="N_PROVINCIA">
       <Position>4</Position>
       <DataType>NUMBER(2)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="116" parent="81" name="LOCALIDADES_PK">
+    <index id="117" parent="81" name="LOCALIDADES_PK">
       <ObjectId>264619</ObjectId>
       <CreatedTimestamp>2018-02-05.10:31:59</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-05.10:31:59</ModifiedTimestamp>
@@ -455,57 +461,155 @@
       <ColNames>ID_LOCALIDAD</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="117" parent="81" name="LOCALIDADES_PK">
+    <key id="118" parent="81" name="LOCALIDADES_PK">
       <ModifiedTimestamp>2018-02-05.10:31:59</ModifiedTimestamp>
       <ColNames>ID_LOCALIDAD</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>LOCALIDADES_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <check id="118" parent="81" name="LOCALIDADES_NN1">
+    <foreign-key id="119" parent="81" name="LOCALIDADES_FK">
+      <ModifiedTimestamp>2018-02-05.10:56:22</ModifiedTimestamp>
+      <ColNames>N_PROVINCIA</ColNames>
+      <RefSchemaName>IHSSANEE</RefSchemaName>
+      <RefTableName>PROVINCIAS</RefTableName>
+      <RefKeyName>PROVINCIAS_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <check id="120" parent="81" name="LOCALIDADES_NN1">
       <ModifiedTimestamp>2018-02-05.10:31:59</ModifiedTimestamp>
       <ColNames>NOMBRE</ColNames>
       <Predicate>&quot;NOMBRE&quot; IS NOT NULL</Predicate>
     </check>
-    <check id="119" parent="81" name="LOCALIDADES_NN2">
+    <check id="121" parent="81" name="LOCALIDADES_NN2">
       <ModifiedTimestamp>2018-02-05.10:31:59</ModifiedTimestamp>
       <ColNames>N_PROVINCIA</ColNames>
       <Predicate>&quot;N_PROVINCIA&quot; IS NOT NULL</Predicate>
     </check>
-    <column id="120" parent="82" name="ID">
+    <column id="122" parent="82" name="N_PROVINCIA">
+      <Position>1</Position>
+      <DataType>NUMBER(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="123" parent="82" name="NOMBRE">
+      <Position>2</Position>
+      <DataType>VARCHAR2(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="82" name="SUPERFICIE">
+      <Position>3</Position>
+      <DataType>NUMBER(5)|0</DataType>
+    </column>
+    <column id="125" parent="82" name="ID_CAPITAL">
+      <Position>4</Position>
+      <DataType>NUMBER(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="126" parent="82" name="ID_COMUNIDAD">
+      <Position>5</Position>
+      <DataType>NUMBER(2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="127" parent="82" name="PROVINCIAS_PK">
+      <ObjectId>264737</ObjectId>
+      <CreatedTimestamp>2018-02-05.10:56:15</CreatedTimestamp>
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <TablespaceName>USUARIOS</TablespaceName>
+      <ColNames>N_PROVINCIA</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="128" parent="82" name="PROVINCIAS_UK1">
+      <ObjectId>264738</ObjectId>
+      <CreatedTimestamp>2018-02-05.10:56:15</CreatedTimestamp>
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <TablespaceName>USUARIOS</TablespaceName>
+      <ColNames>NOMBRE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="129" parent="82" name="PROVINCIAS_UK2">
+      <ObjectId>264739</ObjectId>
+      <CreatedTimestamp>2018-02-05.10:56:15</CreatedTimestamp>
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <TablespaceName>USUARIOS</TablespaceName>
+      <ColNames>ID_CAPITAL</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="130" parent="82" name="PROVINCIAS_PK">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>N_PROVINCIA</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PROVINCIAS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="131" parent="82" name="PROVINCIAS_UK1">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>NOMBRE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PROVINCIAS_UK1</UnderlyingIndexName>
+    </key>
+    <key id="132" parent="82" name="PROVINCIAS_UK2">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>ID_CAPITAL</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PROVINCIAS_UK2</UnderlyingIndexName>
+    </key>
+    <foreign-key id="133" parent="82" name="PROVINCIAS_FK1">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>ID_CAPITAL</ColNames>
+      <RefSchemaName>IHSSANEE</RefSchemaName>
+      <RefTableName>LOCALIDADES</RefTableName>
+      <RefKeyName>LOCALIDADES_PK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <check id="134" parent="82" name="PROVINCIAS_NN1">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>NOMBRE</ColNames>
+      <Predicate>&quot;NOMBRE&quot; IS NOT NULL</Predicate>
+    </check>
+    <check id="135" parent="82" name="PROVINCIAS_NN2">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>ID_CAPITAL</ColNames>
+      <Predicate>&quot;ID_CAPITAL&quot; IS NOT NULL</Predicate>
+    </check>
+    <check id="136" parent="82" name="PROVINCIAS_NN3">
+      <ModifiedTimestamp>2018-02-05.10:56:15</ModifiedTimestamp>
+      <ColNames>ID_COMUNIDAD</ColNames>
+      <Predicate>&quot;ID_COMUNIDAD&quot; IS NOT NULL</Predicate>
+    </check>
+    <column id="137" parent="83" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(4)|0</DataType>
     </column>
-    <column id="121" parent="82" name="NOMBRE">
+    <column id="138" parent="83" name="NOMBRE">
       <Position>2</Position>
       <DataType>VARCHAR2(20)|0</DataType>
     </column>
-    <column id="122" parent="83" name="ID_TAREA">
+    <column id="139" parent="84" name="ID_TAREA">
       <Position>1</Position>
       <DataType>NUMBER(2)|0</DataType>
     </column>
-    <column id="123" parent="83" name="DESCRIPOCION">
+    <column id="140" parent="84" name="DESCRIPOCION">
       <Position>2</Position>
       <DataType>VARCHAR2(30)|0</DataType>
     </column>
-    <column id="124" parent="84" name="COD_CURSO">
+    <column id="141" parent="85" name="COD_CURSO">
       <Position>1</Position>
       <DataType>CHAR(8)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="125" parent="84" name="TITULO">
+    <column id="142" parent="85" name="TITULO">
       <Position>2</Position>
       <DataType>VARCHAR2(50)|0</DataType>
     </column>
-    <column id="126" parent="84" name="DURACION">
+    <column id="143" parent="85" name="DURACION">
       <Position>3</Position>
       <DataType>NUMBER(3)|0</DataType>
     </column>
-    <column id="127" parent="84" name="TERMARIO">
+    <column id="144" parent="85" name="TERMARIO">
       <Position>4</Position>
       <DataType>CLOB|0</DataType>
     </column>
-    <index id="128" parent="84" name="TIPOS_CURSOS_PK">
+    <index id="145" parent="85" name="TIPOS_CURSOS_PK">
       <ObjectId>263871</ObjectId>
       <CreatedTimestamp>2018-02-02.09:59:49</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-02.09:59:49</ModifiedTimestamp>
@@ -513,7 +617,7 @@
       <ColNames>COD_CURSO</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="129" parent="84" name="TIPOS_CURSOS_UK">
+    <index id="146" parent="85" name="TIPOS_CURSOS_UK">
       <ObjectId>263872</ObjectId>
       <CreatedTimestamp>2018-02-02.09:59:49</CreatedTimestamp>
       <ModifiedTimestamp>2018-02-02.09:59:49</ModifiedTimestamp>
@@ -521,14 +625,14 @@
       <ColNames>TITULO</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="130" parent="84" name="TIPOS_CURSOS_PK">
+    <key id="147" parent="85" name="TIPOS_CURSOS_PK">
       <ModifiedTimestamp>2018-02-02.09:59:49</ModifiedTimestamp>
       <ColNames>COD_CURSO</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>TIPOS_CURSOS_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="131" parent="84" name="TIPOS_CURSOS_UK">
+    <key id="148" parent="85" name="TIPOS_CURSOS_UK">
       <ModifiedTimestamp>2018-02-02.09:59:49</ModifiedTimestamp>
       <ColNames>TITULO</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
