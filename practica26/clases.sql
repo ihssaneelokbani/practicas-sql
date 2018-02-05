@@ -44,4 +44,11 @@ CREATE table asistir (
   CONSTRAINT asistir_pk PRIMARY KEY (dni,n_curso)
 );
 
-lsdkjsdflksdfj
+drop table alumnos CASCADE CONSTRAINTS ;
+drop table cursos CASCADE CONSTRAINTS ;
+drop table asistir CASCADE CONSTRAINTS ;
+DROP TABLE tipos_cursos CASCADE CONSTRAINTS ;
+drop TABLE empresas CASCADE CONSTRAINTS ;
+DROP TABLE profesores CASCADE CONSTRAINTS ;
+
+purge RECYCLEBIN ;
