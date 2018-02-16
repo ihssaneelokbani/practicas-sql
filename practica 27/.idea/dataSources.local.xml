@@ -11,5 +11,15 @@
       <user-name>ihssanee</user-name>
       <introspection-schemas>*:IHSSANEE</introspection-schemas>
     </data-source>
+    <data-source name="Oracle - @gandhi" uuid="c76f95bf-9d6c-4c16-919c-710165456869">
+      <database-info product="Oracle" version="Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production&#10;With the Partitioning, OLAP, Data Mining and Real Application Testing options" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
+        <extra-name-characters>$#</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>clases</user-name>
+      <introspection-schemas>*:CLASES</introspection-schemas>
+    </data-source>
   </component>
 </project>
