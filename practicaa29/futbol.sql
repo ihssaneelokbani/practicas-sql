@@ -27,8 +27,9 @@ CREATE table partidos (
   goles_fuera NUMBER(2),
   observaciones VARCHAR2(1000),
   CONSTRAINT partidos_pk PRIMARY KEY (id_equipo_casa,id_equipo_fuera),
-  CONSTRAINT partidos_ck CHECK (id_equipo_fuera != id_equipo_fuera)
+  CONSTRAINT partidos_ck CHECK (id_equipo_casa != id_equipo_fuera)
 );
+
 CREATE table goles(
   id_equipo_casa NUMBER(2) ,
   id_equipo_fuera NUMBER(2) ,
@@ -56,4 +57,49 @@ alter table equipos add(
 
 --
 alter table jugadores drop constraint jugadores_nn ;
+
+--3
+
+INSERT into equipos(id_equipo,NOMBRE,CUIDAD,aforo,ano_fundacion,ESTADIO) VALUES (1,'Cascorro F.C.','Cascorro de Arriba',4000,to_date('1/1/1961','dd/mm/yyyy'),'La Arenera');
+INSERT INTO equipos (id_equipo,NOMBRE,CUIDAD,aforo,ano_fundacion,ESTADIO) VALUES (2,'Matalasleñas','Cerro galvez',1200,to_date('12/03/1970','dd/mm/yyyy'),'Matalasleñas');
+
+INSERT INTO jugadores (id_jugador, nombre, fecha_nac, id_equipo) VALUES (1,'Amoribia',to_date( '20/1/1990','dd/mm/yyyy'),1);
+INSERT INTO jugadores (id_jugador, nombre, fecha_nac, id_equipo) VALUES (2,'Garcia',NULL ,2);
+INSERT INTO jugadores (id_jugador, nombre, fecha_nac, id_equipo) VALUES (3,'Pedrosa',to_date('12/10/1993','dd/mm/yyyy'),1);
+
+
+
+INSERT INTO partidos (id_equipo_casa, id_equipo_fuera, fecha, goles_casa, goles_fuera, observaciones) VALUES (1,2,to_date('5/11/2016','dd/mm/yyyy'),2,1,NULL );
+
+INSERT INTO goles VALUES (1,2,INTERVAL '40' minute,'falta directa',1);
+INSERT INTO goles VALUES (1,1,INTERVAl '20' MINUTE ,'penalti',2);
+INSERT INTO goles VALUES (2,1,INTERVAL '70' MINUTE ,'gran jugada',3);
+SELECT *from jugadores;
+
+SELECT *FROM goles;
+
+
+
+---4
+--
+UPDATE equipos set nombre='Real Cascorro' WHERE nombre='Cascorro F.C.';
+--
+UPDATE equipos SET aforo=aforo+500;
+--
+COMMIT ;
+---
+DELETE equipos;
+select * from partidos;
+select * from goles;
+--
+ROLLBACK ;
+---
+ALTER TABLE  equipos add (
+ provincia VARCHAR2(40)
+  );
+
+update equipos SET  nombre='Cascorro' WHERE nombre in('Zamora','Matalasleñas');
+
+
+
 
